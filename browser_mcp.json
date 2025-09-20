@@ -1,12 +1,12 @@
 {
   "mcpServers": {
-    "duckduckgo": {
-      "command": "npx",
-      "args": ["duckduckgo-mcp-server"]
-    },
     "google-search": {
       "command": "npx",
-      "args": ["@mcp-server/google-search-mcp@latest"]
+      "args": ["@mcp-server/google-search-mcp@latest"],
+      "env": {
+        "GOOGLE_API_KEY": "",
+        "GOOGLE_CSE_ID": ""
+      }
     },
     "wikipedia": {
       "command": "npx",
@@ -19,20 +19,23 @@
     },
     "airbnb": {
       "command": "npx",
-      "args": ["@openbnb/mcp-server-airbnb"]
+      "args": ["@openbnb/mcp-server-airbnb"],
+      "env": {
+        "AIRBNB_API_KEY": ""
+      }
     },
     "github": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>" }
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "" }
     },
     "git": {
       "command": "uvx",
-      "args": ["mcp-server-git", "--repository", "path/to/your/repo"]
+      "args": ["mcp-server-git", "--repository", "C:/Users/debab/Desktop/IIT+SELF LEARNING/CODING/ModelContextProtocol"]
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/allowed/path"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/debab/Desktop"]
     },
     "postgres": {
       "command": "npx",
