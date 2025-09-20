@@ -13,3 +13,10 @@ git branch
 git checkout feature-x
 git branch
 
+git checkout main
+git switch main
+git pull origin main
+git merge feature-x
+git push origin main
+git branch -d feature-x
+
