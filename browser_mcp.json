@@ -1,28 +1,46 @@
 {
   "mcpServers": {
+    "duckduckgo": {
+      "command": "npx",
+      "args": ["duckduckgo-mcp-server"]
+    },
+    "google-search": {
+      "command": "npx",
+      "args": ["@mcp-server/google-search-mcp@latest"]
+    },
+    "wikipedia": {
+      "command": "npx",
+      "args": ["wikipedia-mcp-server"]
+    },
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest"],
-      "env": {
-        "DISPLAY": ":1"
-      }
+      "env": { "DISPLAY": ":1" }
     },
     "airbnb": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@openbnb/mcp-server-airbnb"
-      ]
+      "args": ["@openbnb/mcp-server-airbnb"]
     },
-    "duckduckgo-search": {
+    "github": {
       "command": "npx",
-      "args": [
-        "-y",
-        "duckduckgo-mcp-server"
-      ],
-      "env": {
-        "RATE_LIMIT_MS": "5000"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>" }
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "path/to/your/repo"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/allowed/path"]
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:pass@localhost/dbname"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
     }
   }
 }
