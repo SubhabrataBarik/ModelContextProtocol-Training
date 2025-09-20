@@ -18,10 +18,12 @@ async def main():
 
     # Create agent with the client
     agent = MCPAgent(llm=llm, client=client, max_steps=30)
+# List all my GitHub repositories for username 'SubhabrataBarik'
+# show me all files present in my desktop on my laptop
 
     # Run the query
     result = await agent.run(
-        "Find the best restaurant in San Francisco USING GOOGLE SEARCH",
+        "Open Google and search MakemyTrip",
         max_steps=30,
     )
     print(f"\nResult: {result}")
